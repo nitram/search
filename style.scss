@@ -1,44 +1,45 @@
+// Variables
+$header-height: 48px;
+$logo-height: 92px;
+$nav-padding: 6px;
+$border-radius: 24px;
+
+// General elements
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
-
 ul li {
   list-style-type: none;
 }
-
 a {
   color: #000;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
-
 a:focus {
   outline-offset: 2px;
 }
 
+// Styling
 .nav-bar {
-  padding: 6px;
+  padding: $nav-padding;
   overflow: hidden;
 }
-
 .nav-bar ul {
   float: right;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 48px;
+  height: $header-height;
   padding-right: 4px;
 }
-
 .nav-item {
   padding-left: 15px;
 }
-
 .nav-item:last-child {
   padding-right: 15px;
 }
@@ -47,12 +48,12 @@ a:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100% - 120px);
+  height: calc(100% - #{($header-height + $nav-padding * 2) * 2});
 }
 
 .row {
   width: 100%;
-  min-height: 92px;
+  min-height: $logo-height;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,9 +62,8 @@ a:focus {
 .logo-container {
   position: relative;
   display: flex;
-  height: 92px;
+  height: $logo-height;
 }
-
 .logo {
   max-height: 100%;
 }
@@ -74,13 +74,12 @@ a:focus {
   margin: 0 20px;
   border: 1px solid #dfe1e5;
   box-shadow: none;
-  border-radius: 24px;
+  border-radius: $border-radius;
   height: 44px;
 }
-
 .search-bar-container:hover {
-  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
-  border-color: rgba(223, 225, 229, 0);
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223,225,229,0);
 }
 
 .search-bar {
@@ -89,22 +88,23 @@ a:focus {
   justify-content: space-between;
   align-items: center;
   padding: 5px 15px;
-  border-radius: 24px;
-}
-.search-bar svg {
-  fill: #9aa0a6;
-  height: 20px;
-  width: 20px;
-  vertical-align: middle;
-}
-.search-bar input {
-  width: 100%;
-  padding-left: 13px;
-  border: none;
-  color: rgba(0, 0, 0, 0.87);
-  outline: none;
-  height: 34px;
-  font-size: 16px;
+  border-radius: $border-radius;
+
+  svg {
+    fill: #9aa0a6;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+  }
+  input {
+    width: 100%;
+    padding-left: 13px;
+    border: none;
+    color: rgba(0,0,0,.87);
+    outline: none;
+    height: 34px;
+    font-size: 16px;
+  }
 }
 
 .submit-btn {
@@ -122,34 +122,28 @@ a:focus {
   cursor: pointer;
   user-select: none;
 }
-
 .submit-btn:hover {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
   background-color: #f8f9fa;
   border: 1px solid #dadce0;
   color: #202124;
 }
-
 .submit-btn:focus {
   border: 1px solid #4285f4;
   outline: none;
 }
 
+// Shortcuts 
 .m-0 {
   margin: 0;
 }
-
 .p-0 {
   padding: 0;
 }
-
 .f {
   font-family: arial, sans-serif;
   font-size: 13px;
 }
-
 .ai-fs {
   align-items: flex-start;
 }
-
-/*# sourceMappingURL=style.css.map */
