@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <body>
+        <div class="nav-bar">
+            <ul class="m-0">
+                <li class="nav-item">
+                    <a class="f" href="index.html">Search</a>    
+                </li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <form id="search" action="https://google.com/search">
+                <div class="row">
+                    <div class="logo-container">
+                        <img class="logo" src="assets/logo.png" alt="logo">
+                        <span class="f">images</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="search-bar-container">
+                        <div class="search-bar">
+                            <span>
+                                <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                                </svg>
+                            </span>
+                            <input id="q" class="m-0 p-0" type="text" name="q" autofocus autocomplete="off">
+                            <input type="hidden" name="tbm" value="isch">
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-fs row">
+                    <input class="submit-btn f" type="submit" value="Google Image Search" onclick="return empty()">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

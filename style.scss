@@ -63,6 +63,15 @@ a:focus {
   position: relative;
   display: flex;
   height: $logo-height;
+
+  span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #4285f4;
+    font-size: 16px;
+    white-space: nowrap;
+  }
 }
 .logo {
   max-height: 100%;
